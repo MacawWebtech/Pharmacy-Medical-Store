@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Trusted Neighbourhood Pharmacy | Your Pharmacy</title>
+  <meta name="description" content="Genuine medicines, vitamins and health products with free advice from licensed pharmacists. Order online, send your prescription and get home delivery.">
+  <link rel="canonical" href="https://www.example-pharmacy.com/pages/index.html">
+  <meta name="theme-color" content="#0b7a62">
+
+  <!-- Open Graph / social sharing. TODO: update the domain and image. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Your Trusted Neighbourhood Pharmacy | Your Pharmacy">
+  <meta property="og:description" content="Genuine medicines, vitamins and health products with free advice from licensed pharmacists. Order online, send your prescription and get home delivery.">
+  <meta property="og:url" content="https://www.example-pharmacy.com/pages/index.html">
+  <meta property="og:image" content="https://www.example-pharmacy.com/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- TODO: Replace favicon with your own logo -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+  <!-- Apply the saved or system theme before the page paints (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("pharmacy-theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        var dir = localStorage.getItem("pharmacy-dir");
+        if (dir) document.documentElement.setAttribute("dir", dir);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- TODO: Fonts. Max 2 families: Plus Jakarta Sans (headings) + Inter (body). Change here and in style.css variables. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 and Bootstrap Icons (CDN). The RTL build is swapped in by main.js when direction is RTL. -->
+  <link id="bootstrap-css" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-ltr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-rtl="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Template styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <!-- JSON-LD structured data. TODO: replace every placeholder value with your real business details. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+  "name": "Your Pharmacy Name",
+  "url": "https://www.example-pharmacy.com/pages/index.html",
+  "image": "https://www.example-pharmacy.com/assets/images/og-image.png",
+  "telephone": "+91-00000-00000",
+  "email": "hello@example-pharmacy.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main Road",
+    "addressLocality": "Your City",
+    "addressRegion": "Your State",
+    "postalCode": "000000",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/",
+    "https://www.instagram.com/"
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ========== EMERGENCY NOTE ========== -->
+  <div class="emergency-bar" role="note">
+    <div class="container"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i><strong>For medical emergencies, call your local emergency number.</strong></div>
+  </div>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <!-- TODO: Replace the logo and store name -->
+        <a class="navbar-brand" href="index.html" aria-label="Pharmacy &amp; Medical Store, home">
+          <img class="brand-logo brand-logo-light" src="../assets/images/logo-full.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness">
+          <img class="brand-logo brand-logo-dark" src="../assets/images/logo-full-white.png" width="900" height="267" alt="" aria-hidden="true">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu"
+                aria-controls="main-menu" aria-expanded="false" aria-label="Open the menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto me-lg-2 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="index.html" id="home-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu" aria-labelledby="home-menu">
+                <li><a class="dropdown-item active" href="index.html" aria-current="page">Home 1</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="home-delivery.html">Home Delivery</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="header-tools">
+            <button type="button" class="tool-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span data-theme-label>Dark</span>
+            </button>
+            <button type="button" class="tool-btn" data-dir-toggle aria-pressed="false" aria-label="Switch text direction between left-to-right and right-to-left">
+              <span data-dir-label>RTL</span>
+            </button>
+            <!-- TODO: Phone number -->
+            <a class="btn btn-sm" href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6">
+            <span class="hero-pill"><i class="bi bi-patch-check-fill" aria-hidden="true"></i> Licensed pharmacy, open 7 days</span>
+            <h1 id="hero-title">Your Trusted <span class="text-gradient">Neighbourhood</span> Pharmacy</h1>
+            <p class="lead">Genuine medicines and friendly advice, delivered safely to your door.</p>
+            <div class="hero-actions">
+              <a class="btn" href="products.html"><i class="bi bi-capsule" aria-hidden="true"></i> Order Medicines</a>
+              <a class="btn btn-outline" href="contact.html#enquiry"><i class="bi bi-file-earmark-arrow-up" aria-hidden="true"></i> Send Prescription</a>
+            </div>
+            <!-- Search bar: sends the visitor to the Products page -->
+            <form id="home-search" class="search-bar" role="search" aria-label="Search products">
+              <label class="visually-hidden" for="home-search-input">Search medicines, vitamins, personal care</label>
+              <input class="form-control" type="search" id="home-search-input" placeholder="Search medicines, vitamins, personal care" autocomplete="off">
+              <button class="btn" type="submit"><i class="bi bi-search" aria-hidden="true"></i> Search</button>
+            </form>
+            <!-- TODO: Replace these sample numbers with your real ones, or remove the block -->
+            <ul class="stats list-unstyled mb-0">
+              <li><strong>10,000+</strong><span>Happy customers</span></li>
+              <li><strong>5,000+</strong><span>Products in stock</span></li>
+              <li><strong>Same day</strong><span>Home delivery</span></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="hero-visual">
+              <!-- TODO: Replace with a real photo of your store or team -->
+              <img class="hero-img" src="../assets/images/ph10.jpg" width="800" height="600" fetchpriority="high" alt="Pharmacist in a white coat standing beside medicine shelves" onerror="this.onerror=null;this.src='../assets/images/hero.png'">
+              <div class="float-chip chip-a"><i class="bi bi-truck" aria-hidden="true"></i><div><strong>Free home delivery</strong><span>On orders above the minimum</span></div></div>
+              <div class="float-chip chip-b"><i class="bi bi-person-badge" aria-hidden="true"></i><div><strong>Licensed pharmacists</strong><span>Here to help you</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRUST STRIP ========== -->
+    <div class="trust-strip">
+      <div class="container">
+        <ul class="trust-list">
+          <li><i class="bi bi-patch-check" aria-hidden="true"></i> Genuine medicines</li>
+          <li><i class="bi bi-shield-check" aria-hidden="true"></i> Pharmacist checked</li>
+          <li><i class="bi bi-lock" aria-hidden="true"></i> Private and secure</li>
+          <li><i class="bi bi-headset" aria-hidden="true"></i> Friendly support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ========== HEALTH ESSENTIALS ========== -->
+    <section class="section" aria-labelledby="essentials-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Shop by need</span>
+          <h2 id="essentials-title">Health Essentials</h2>
+          <p>Everything for you and your family, in one place.</p>
+        </div>
+        <div class="bento" data-reveal>
+          <a class="card-box bento-feature bento-photo" href="products.html?cat=medicines"><span class="icon-circle"><i class="bi bi-capsule" aria-hidden="true"></i></span><div><h3>Medicines</h3><p>Tablets, syrups and more. Send your prescription and we will do the rest.</p></div></a>
+          <a class="card-box bento-img" style="--bg: url('../assets/images/vitamins.jpg')" href="products.html?cat=vitamins"><span class="icon-circle"><i class="bi bi-brightness-high" aria-hidden="true"></i></span><div><h3>Vitamins &amp; Supplements</h3><p>Daily wellbeing support</p></div></a>
+          <a class="card-box bento-img" style="--bg: url('../assets/images/personal care.jpg')" href="products.html?cat=personal"><span class="icon-circle"><i class="bi bi-droplet-half" aria-hidden="true"></i></span><div><h3>Personal Care</h3><p>Skin, hair and hygiene</p></div></a>
+          <a class="card-box bento-wide bento-img" style="--bg: url('../assets/images/health devices.jpg')" href="products.html?cat=devices"><span class="icon-circle"><i class="bi bi-heart-pulse" aria-hidden="true"></i></span><div><h3>Health Devices</h3><p>Thermometers, blood pressure and sugar monitors</p></div></a>
+          <a class="card-box bento-img bento-wide" style="--bg: url('../assets/images/babycare.jpg')" href="products.html?cat=baby"><span class="icon-circle"><i class="bi bi-balloon-heart" aria-hidden="true"></i></span><div><h3>Baby Care</h3><p>Gentle products for little ones</p></div></a>
+          <a class="card-box bento-img bento-wide" style="--bg: url('../assets/images/fist aid.jpg')" href="products.html?cat=firstaid"><span class="icon-circle"><i class="bi bi-bandaid" aria-hidden="true"></i></span><div><h3>First Aid</h3><p>Be ready for small mishaps</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== POPULAR PRODUCTS ========== -->
+    <section class="section section-alt" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Everyday favourites</span>
+          <h2 id="popular-title">Popular products</h2>
+          <p>A few things our neighbours pick up most often.</p>
+        </div>
+        <div class="row g-4" data-reveal>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Vitamin C Tablet.jpg" width="400" height="300" loading="lazy" alt="Pack of Vitamin C Tablets" onerror="this.onerror=null;this.src='../assets/images/product-vitamin-c.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc">Over the counter</span></div>
+                <h3>Vitamin C Tablets</h3>
+                <p class="product-use">Daily support for general wellbeing</p>
+                <div class="product-meta">
+                  <span class="pack-size">30 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 60.00</span>
+                </div>
+                <a class="btn btn-sm" href="products.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> View product<span class="visually-hidden"> Vitamin C Tablets</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Multivitamin.jpg" width="400" height="300" loading="lazy" alt="Pack of Multivitamin" onerror="this.onerror=null;this.src='../assets/images/product-multivitamin.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc">Over the counter</span></div>
+                <h3>Multivitamin</h3>
+                <p class="product-use">A simple daily supplement dietary </p>
+                <div class="product-meta">
+                  <span class="pack-size">30 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 45.00</span>
+                </div>
+                <a class="btn btn-sm" href="products.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> View product<span class="visually-hidden"> Multivitamin</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Digital Thermometer.jpg" width="400" height="300" loading="lazy" alt="Pack of Digital Thermometer" onerror="this.onerror=null;this.src='../assets/images/product-thermometer.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-info">Health device</span></div>
+                <h3>Digital Thermometer</h3>
+                <p class="product-use">Quick, easy temperature checks</p>
+                <div class="product-meta">
+                  <span class="pack-size">1 piece</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 85.00</span>
+                </div>
+                <a class="btn btn-sm" href="products.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> View product<span class="visually-hidden"> Digital Thermometer</span></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Hand Sanitiser.jpg" width="400" height="300" loading="lazy" alt="Pack of Hand Sanitiser" onerror="this.onerror=null;this.src='../assets/images/product-sanitiser.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc">Over the counter</span></div>
+                <h3>Hand Sanitiser</h3>
+                <p class="product-use">Everyday hand hygiene on the go</p>
+                <div class="product-meta">
+                  <span class="pack-size">100 ml</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 15.00</span>
+                </div>
+                <a class="btn btn-sm" href="products.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> View product<span class="visually-hidden"> Hand Sanitiser</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="text-center mt-5 mb-0"><a class="btn" href="products.html">See all products <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Simple and safe</span>
+          <h2 id="how-title">How it works</h2>
+          <p>Getting your medicines takes just three steps.</p>
+        </div>
+        <div class="row g-4 steps-row" data-reveal>
+          <div class="col-12 col-md-4"><div class="card-box step-card"><span class="step-number" aria-hidden="true">1</span><span class="icon-circle"><i class="bi bi-file-earmark-arrow-up" aria-hidden="true"></i></span><h3>Choose or upload prescription</h3><p>Pick products from our list, or send us a photo of your prescription.</p></div></div>
+          <div class="col-12 col-md-4"><div class="card-box step-card"><span class="step-number" aria-hidden="true">2</span><span class="icon-circle"><i class="bi bi-telephone-inbound" aria-hidden="true"></i></span><h3>We confirm</h3><p>Our pharmacist checks your order and calls you to confirm the details and price.</p></div></div>
+          <div class="col-12 col-md-4"><div class="card-box step-card"><span class="step-number" aria-hidden="true">3</span><span class="icon-circle"><i class="bi bi-truck" aria-hidden="true"></i></span><h3>Delivered to your door</h3><p>Your medicines arrive safely packed. Pay online or when you receive them.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="section why-section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why families trust us</span>
+          <h2 id="why-title">Why choose us</h2>
+        </div>
+        <div class="row g-4" data-reveal>
+          <div class="col-12 col-md-6"><div class="why-item"><span class="icon-circle"><i class="bi bi-person-badge" aria-hidden="true"></i></span><div><h3>Licensed pharmacists</h3><p>Qualified people check every prescription and answer your questions.</p></div></div></div>
+          <div class="col-12 col-md-6"><div class="why-item"><span class="icon-circle"><i class="bi bi-patch-check" aria-hidden="true"></i></span><div><h3>Genuine medicines</h3><p>We buy only from approved suppliers, so you can trust what you receive.</p></div></div></div>
+          <div class="col-12 col-md-6"><div class="why-item"><span class="icon-circle"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span><div><h3>Fast delivery</h3><p>Order today, get it today—most local deliveries arrive the same day.</p></div></div></div>
+          <div class="col-12 col-md-6"><div class="why-item"><span class="icon-circle"><i class="bi bi-chat-heart" aria-hidden="true"></i></span><div><h3>Friendly support</h3><p>Call or message us any time we are open. We are happy to help.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOME DELIVERY STRIP ========== -->
+    <section class="delivery-strip" aria-labelledby="strip-title">
+      <div class="container">
+        <h2 id="strip-title" class="h4 mb-4 text-center">Home delivery, made easy</h2>
+        <div class="row g-4 align-items-center justify-content-center">
+          <!-- TODO: Update delivery timing, areas and minimum order -->
+          <div class="col-12 col-md-4"><div class="strip-item"><i class="bi bi-clock" aria-hidden="true"></i><div><h3>Delivery timing</h3><p>9:00 am to 8:00 pm, every day</p></div></div></div>
+          <div class="col-12 col-md-4"><div class="strip-item"><i class="bi bi-geo-alt" aria-hidden="true"></i><div><h3>Areas covered</h3><p>Within 8 km of our store</p></div></div></div>
+          <div class="col-12 col-md-4"><div class="strip-item"><i class="bi bi-bag-check" aria-hidden="true"></i><div><h3>Minimum order</h3><p>XXX (free delivery above this)</p></div></div></div>
+        </div>
+        <p class="mt-4 mb-0 text-center"><a class="btn btn-light" href="home-delivery.html">See delivery details <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Kind words</span>
+          <h2 id="reviews-title">What our customers say</h2>
+        </div>
+        <!-- TODO: Replace with real, permission-checked customer reviews -->
+        <div class="row g-4" data-reveal>
+          <div class="col-12 col-md-6 col-lg-4"><figure class="card-box testimonial"><div class="stars" role="img" aria-label="5 out of 5 stars"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div><blockquote>The pharmacist explained everything slowly and clearly. Delivery was on time.</blockquote><figcaption class="testimonial-who"><img class="avatar" src="../assets/images/Marcus vein.jpg" width="56" height="56" loading="lazy" alt="Portrait of a smiling woman, customer" onerror="this.onerror=null;this.src='../assets/images/team-1.png'"><span><span class="who">Marcus vein</span><br><span class="where">America</span></span></figcaption></figure></div>
+          <div class="col-12 col-md-6 col-lg-4"><figure class="card-box testimonial"><div class="stars" role="img" aria-label="5 out of 5 stars"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div><blockquote>I send my father's prescription by phone every month. It is simple and very reliable.</blockquote><figcaption class="testimonial-who"><img class="avatar" src="../assets/images/Andria Elen.jpg" width="56" height="56" loading="lazy" alt="Portrait of a smiling man, customer" onerror="this.onerror=null;this.src='../assets/images/team-2.png'"><span><span class="who">Andria Elen</span><br><span class="where">America</span></span></figcaption></figure></div>
+          <div class="col-12 col-md-6 col-lg-4 mx-md-auto mx-lg-0"><figure class="card-box testimonial"><div class="stars" role="img" aria-label="5 out of 5 stars"><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i></div><blockquote>Friendly staff and fair prices. They always call to confirm before sending.</blockquote><figcaption class="testimonial-who"><img class="avatar" src="../assets/images/David Sen.jpg" width="56" height="56" loading="lazy" alt="Portrait of a smiling woman, customer" onerror="this.onerror=null;this.src='../assets/images/team-3.png'"><span><span class="who">David Sen</span><br><span class="where">London</span></span></figcaption></figure></div>
+        </div>
+      </div>
+    </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="section" aria-labelledby="news-title">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6">
+            <h2 id="news-title">Get health tips and offers</h2>
+            <p class="mb-0">One short email a month. No spam, and you can leave at any time.</p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <!-- TODO: Newsletter. Set the action to your Mailchimp or ConvertKit form URL (or set it in main.js Config). -->
+            <form data-newsletter action="https://YOUR-DOMAIN.us1.list-manage.com/subscribe/post?u=YOUR_U&amp;id=YOUR_ID" method="post" novalidate class="newsletter-form">
+              <label class="visually-hidden" for="news-email">Your email address</label>
+              <input class="form-control" type="email" id="news-email" name="EMAIL" placeholder="Your email address" autocomplete="email" aria-describedby="news-note">
+              <button class="btn" type="submit">Sign up</button>
+            </form>
+            <p id="news-note" class="form-text mt-2 mb-0" data-newsletter-note aria-live="polite">We only use your email to send the newsletter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CALL TO ACTION ========== -->
+  <section class="section pt-0" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-banner cta-split">
+        <div class="cta-text">
+          <h2 id="cta-title">Need medicines today?</h2>
+          <p>Send us your prescription or a list of what you need. We will confirm and deliver to your door.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="contact.html#enquiry"><i class="bi bi-file-earmark-arrow-up" aria-hidden="true"></i> Send Prescription</a>
+            <a class="btn btn-outline-light" href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call us now</a>
+          </div>
+        </div>
+        <!-- TODO: Replace with a real photo -->
+        <div class="cta-media"><img src="../assets/images/ph3.jpg" width="800" height="600" loading="lazy" alt="A pharmacist reaching for a medicine box on a shelf" onerror="this.onerror=null;this.src='../assets/images/hero.png'"></div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html" aria-label="Pharmacy &amp; Medical Store, home"><img src="../assets/images/logo-full-white.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness" loading="lazy"></a>
+          <p>Genuine medicines and friendly advice from licensed pharmacists, delivered to your door.</p>
+          <ul class="social-links" aria-label="Social media">
+            <!-- TODO: Social media links -->
+            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://wa.me/910000000000" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer-col" aria-label="Quick links">
+          <h3>Quick links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index-2.html">Home 2</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="home-delivery.html">Home Delivery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="footer-links footer-contact">
+            <!-- TODO: Phone, email and address -->
+            <li><i class="bi bi-telephone" aria-hidden="true"></i><a href="tel:+910000000000"><span class="phone-number">+91 00000 00000</span></a></li>
+            <li><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hello@example-pharmacy.com">hello@example-pharmacy.com</a></li>
+            <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>123 Main Road, Your City</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Opening hours</h3>
+          <ul class="footer-links footer-hours">
+            <li><span>Mon to Sat</span><strong>8:00 am to 9:00 pm</strong></li>
+            <li><span>Sunday</span><strong>9:00 am to 2:00 pm</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer" role="note">
+        <i class="bi bi-info-circle" aria-hidden="true"></i>
+        <p><strong>Disclaimer:</strong> Information on this website is for general guidance only and is not a substitute for professional medical advice. Please consult a doctor or pharmacist.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span data-year>2026</span> Your Pharmacy. All rights reserved.</span>
+        <!-- TODO: Replace with your real drug licence number -->
+        <span>Drug Licence No: XX-XXXXX/XXXX</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== STICKY CALL / WHATSAPP BAR (mobile only) ========== -->
+  <div class="sticky-contact" role="navigation" aria-label="Quick contact">
+    <a href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call</a>
+    <a class="whatsapp" href="https://wa.me/910000000000" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# TODO: Replace the domain below with your real domain.
+User-agent: *
+Allow: /
+Disallow: /pages/404.html
+Disallow: /pages/coming-soon.html
+
+Sitemap: https://www.example-pharmacy.com/sitemap.xml

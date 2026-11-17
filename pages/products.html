@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicines, Vitamins and Personal Care | Your Pharmacy</title>
+  <meta name="description" content="Browse medicines, vitamins, personal care, baby care and health devices. Search, filter and add items to your list, then send us an enquiry for home delivery.">
+  <link rel="canonical" href="https://www.example-pharmacy.com/pages/products.html">
+  <meta name="theme-color" content="#0b7a62">
+
+  <!-- Open Graph / social sharing. TODO: update the domain and image. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Medicines, Vitamins and Personal Care | Your Pharmacy">
+  <meta property="og:description" content="Browse medicines, vitamins, personal care, baby care and health devices. Search, filter and add items to your list, then send us an enquiry for home delivery.">
+  <meta property="og:url" content="https://www.example-pharmacy.com/pages/products.html">
+  <meta property="og:image" content="https://www.example-pharmacy.com/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- TODO: Replace favicon with your own logo -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+  <!-- Apply the saved or system theme before the page paints (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("pharmacy-theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        var dir = localStorage.getItem("pharmacy-dir");
+        if (dir) document.documentElement.setAttribute("dir", dir);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- TODO: Fonts. Max 2 families: Plus Jakarta Sans (headings) + Inter (body). Change here and in style.css variables. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 and Bootstrap Icons (CDN). The RTL build is swapped in by main.js when direction is RTL. -->
+  <link id="bootstrap-css" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-ltr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-rtl="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Template styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ========== EMERGENCY NOTE ========== -->
+  <div class="emergency-bar" role="note">
+    <div class="container"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i><strong>For medical emergencies, call your local emergency number.</strong></div>
+  </div>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <!-- TODO: Replace the logo and store name -->
+        <a class="navbar-brand" href="index.html" aria-label="Pharmacy &amp; Medical Store, home">
+          <img class="brand-logo brand-logo-light" src="../assets/images/logo-full.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness">
+          <img class="brand-logo brand-logo-dark" src="../assets/images/logo-full-white.png" width="900" height="267" alt="" aria-hidden="true">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu"
+                aria-controls="main-menu" aria-expanded="false" aria-label="Open the menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto me-lg-2 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="home-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu" aria-labelledby="home-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link active" href="products.html" aria-current="page">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="home-delivery.html">Home Delivery</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="header-tools">
+            <button type="button" class="tool-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span data-theme-label>Dark</span>
+            </button>
+            <button type="button" class="tool-btn" data-dir-toggle aria-pressed="false" aria-label="Switch text direction between left-to-right and right-to-left">
+              <span data-dir-label>RTL</span>
+            </button>
+            <!-- TODO: Phone number -->
+            <a class="btn btn-sm" href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE BANNER ========== -->
+  <div class="page-banner has-photo" style="background-image:url('../assets/images/ph8.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div class="container">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb mb-2">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Products</li>
+      </ol></nav>
+      <h1>Our Products</h1>
+      <p>Find what you need and add it to your list. We will confirm the price and availability before delivery.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="section" aria-label="Product list">
+      <div class="container">
+
+        <!-- Prescription notice -->
+        <div class="alert-note alert-warn-note" role="note">
+          <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+          <p><strong>Prescription medicines are dispensed only against a valid prescription.</strong> Products marked &ldquo;Prescription required&rdquo; need a doctor&rsquo;s prescription from you.</p>
+        </div>
+
+        <!-- Search and sort -->
+        <div class="product-toolbar">
+          <div>
+            <label class="form-label" for="product-search">Search products</label>
+            <input class="form-control" type="search" id="product-search" placeholder="Search medicines, vitamins, personal care" autocomplete="off">
+          </div>
+          <div>
+            <label class="form-label" for="product-sort">Sort by</label>
+            <select class="form-select" id="product-sort">
+              <option value="featured">Featured</option>
+              <option value="name-asc">Name: A to Z</option>
+              <option value="name-desc">Name: Z to A</option>
+              <option value="otc-first">No prescription needed first</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category tabs -->
+        <div id="filter-tabs" class="filter-tabs" role="tablist" aria-label="Product categories">
+          <button type="button" role="tab" class="filter-tab" data-cat="all" aria-selected="true" tabindex="0">All products</button>
+          <button type="button" role="tab" class="filter-tab" data-cat="medicines" aria-selected="false" tabindex="-1">Medicines</button>
+          <button type="button" role="tab" class="filter-tab" data-cat="vitamins" aria-selected="false" tabindex="-1">Vitamins &amp; Supplements</button>
+          <button type="button" role="tab" class="filter-tab" data-cat="personal" aria-selected="false" tabindex="-1">Personal Care</button>
+          <button type="button" role="tab" class="filter-tab" data-cat="baby" aria-selected="false" tabindex="-1">Baby Care</button>
+          <button type="button" role="tab" class="filter-tab" data-cat="devices" aria-selected="false" tabindex="-1">Devices</button>
+          <button type="button" role="tab" class="filter-tab" data-cat="firstaid" aria-selected="false" tabindex="-1">First Aid</button>
+        </div>
+
+        <p id="result-status" class="text-muted" role="status" aria-live="polite">Showing all products</p>
+
+        <!-- Product grid: edit, add or remove product cards right here in the HTML.
+             Each card needs: data-id, data-name, data-use, data-cat (medicines, vitamins, personal, baby, devices, firstaid),
+             data-rx (true or false) and data-order (position in the "Featured" order). -->
+        <div id="product-grid" class="row g-4" aria-live="polite">
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="paracetamol" data-name="Paracetamol Tablets 500 mg" data-use="For headache and mild pain" data-cat="medicines" data-rx="false" data-order="0">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Paracetamol Tablets 500 mg.jpg" width="400" height="300" loading="lazy" alt="Pack of Paracetamol Tablets 500 mg" onerror="this.onerror=null;this.src='../assets/images/product-paracetamol.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Paracetamol Tablets</h3>
+                <p class="product-use">For headache, mild pain & Fever</p>
+                <div class="product-meta">
+                  <span class="pack-size">Strip of 10 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 50.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Paracetamol Tablets 500 mg</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="antacid" data-name="Antacid Chewable Tablets" data-use="For occasional acidity and heartburn" data-cat="medicines" data-rx="false" data-order="1">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Antacid Chewable Tablets.jpg" width="400" height="300" loading="lazy" alt="Pack of Antacid Chewable Tablets" onerror="this.onerror=null;this.src='../assets/images/product-antacid.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Antacid Chewable Tablets</h3>
+                <p class="product-use">For occasional acidity and heartburn</p>
+                <div class="product-meta">
+                  <span class="pack-size">Pack of 12 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 45.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Antacid Chewable Tablets</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="ors" data-name="Oral Rehydration Salts" data-use="Replaces water and salts lost during stomach upsets" data-cat="medicines" data-rx="false" data-order="2">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Oral Rehydration Salts.jpg" width="400" height="300" loading="lazy" alt="Pack of Oral Rehydration Salts" onerror="this.onerror=null;this.src='../assets/images/product-ors.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Oral Rehydration Salts</h3>
+                <p class="product-use">Replaces water and salts lost during stomach upsets</p>
+                <div class="product-meta">
+                  <span class="pack-size">Box of 5 sachets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 60.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Oral Rehydration Salts</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="cough-syrup" data-name="Soothing Cough Syrup" data-use="For dry, tickly cough" data-cat="medicines" data-rx="false" data-order="3">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Soothing Cough Syrup.jpg" width="400" height="300" loading="lazy" alt="Pack of Soothing Cough Syrup" onerror="this.onerror=null;this.src='../assets/images/product-cough-syrup.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Soothing Cough Syrup</h3>
+                <p class="product-use">dry, tickly cough or a productive, chesty cough.</p>
+                <div class="product-meta">
+                  <span class="pack-size">100 ml bottle</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 80.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Soothing Cough Syrup</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="antibiotic" data-name="Antibiotic Capsules" data-use="Used for bacterial infections, as advised by your doctor" data-cat="medicines" data-rx="true" data-order="4">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Antibiotic Capsules.jpg" width="400" height="300" loading="lazy" alt="Pack of Antibiotic Capsules" onerror="this.onerror=null;this.src='../assets/images/product-antibiotic.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-rx"><i class="bi bi-file-earmark-medical" aria-hidden="true"></i> Prescription required</span></div>
+                <h3>Antibiotic Capsules</h3>
+                <p class="product-use">Used for bacterial infections, as advised by your doctor</p>
+                <div class="product-meta">
+                  <span class="pack-size">Strip of 6 capsules</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 65.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-chat-dots" aria-hidden="true"></i> <span data-btn-label>Enquire</span><span class="visually-hidden"> Antibiotic Capsules</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="bp-tablets" data-name="Blood Pressure Tablets" data-use="Taken daily as prescribed to manage blood pressure" data-cat="medicines" data-rx="true" data-order="5">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Blood Pressure Tablets.jpg" width="400" height="300" loading="lazy" alt="Pack of Blood Pressure Tablets" onerror="this.onerror=null;this.src='../assets/images/product-bp-tablets.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-rx"><i class="bi bi-file-earmark-medical" aria-hidden="true"></i> Prescription required</span></div>
+                <h3>Blood Pressure Tablets</h3>
+                <p class="product-use">Taken daily as prescribed to manage blood pressure</p>
+                <div class="product-meta">
+                  <span class="pack-size">Strip of 15 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 60.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-chat-dots" aria-hidden="true"></i> <span data-btn-label>Enquire</span><span class="visually-hidden"> Blood Pressure Tablets</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="diabetes-tablets" data-name="Blood Sugar Tablets" data-use="Taken as prescribed to manage blood sugar" data-cat="medicines" data-rx="true" data-order="6">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Blood Sugar Tablets.jpg" width="400" height="300" loading="lazy" alt="Pack of Blood Sugar Tablets" onerror="this.onerror=null;this.src='../assets/images/product-diabetes-tablets.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-rx"><i class="bi bi-file-earmark-medical" aria-hidden="true"></i> Prescription required</span></div>
+                <h3>Blood Sugar Tablets</h3>
+                <p class="product-use">Taken as prescribed to manage blood sugar</p>
+                <div class="product-meta">
+                  <span class="pack-size">Strip of 10 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 80.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-chat-dots" aria-hidden="true"></i> <span data-btn-label>Enquire</span><span class="visually-hidden"> Blood Sugar Tablets</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="eye-drops" data-name="Lubricating Eye Drops" data-use="For dry, tired eyes" data-cat="medicines" data-rx="false" data-order="7">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Lubricating Eye Drops.jpg" width="400" height="300" loading="lazy" alt="Pack of Lubricating Eye Drops" onerror="this.onerror=null;this.src='../assets/images/product-eye-drops.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Lubricating Eye Drops</h3>
+                <p class="product-use">For dry, tired eyes relieve dryness, irritation,</p>
+                <div class="product-meta">
+                  <span class="pack-size">10 ml bottle</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 65.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Lubricating Eye Drops</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="vitamin-c" data-name="Vitamin C 500 mg" data-use="Daily vitamin to support general wellbeing" data-cat="vitamins" data-rx="false" data-order="8">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Vitamin C Tablet.jpg" width="400" height="300" loading="lazy" alt="Pack of Vitamin C 500 mg" onerror="this.onerror=null;this.src='../assets/images/product-vitamin-c.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Vitamin C 500 mg</h3>
+                <p class="product-use">Daily vitamin to support general wellbeing</p>
+                <div class="product-meta">
+                  <span class="pack-size">Bottle of 60 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 60.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Vitamin C 500 mg</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="vitamin-d3" data-name="Vitamin D3 Capsules" data-use="Daily vitamin for bones and general health" data-cat="vitamins" data-rx="false" data-order="9">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Vitamin D3 Capsules.jpg" width="400" height="300" loading="lazy" alt="Pack of Vitamin D3 Capsules" onerror="this.onerror=null;this.src='../assets/images/product-vitamin-d3.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Vitamin D3 Capsules</h3>
+                <p class="product-use">Daily vitamin for bones and general health</p>
+                <div class="product-meta">
+                  <span class="pack-size">Bottle of 30 capsules</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 70.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Vitamin D3 Capsules</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="multivitamin" data-name="Daily Multivitamin" data-use="A mix of everyday vitamins and minerals" data-cat="vitamins" data-rx="false" data-order="10">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Daily Multivitamin.jpg" width="400" height="300" loading="lazy" alt="Pack of Daily Multivitamin" onerror="this.onerror=null;this.src='../assets/images/product-multivitamin.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Daily Multivitamin</h3>
+                <p class="product-use">A mix of everyday vitamins and minerals</p>
+                <div class="product-meta">
+                  <span class="pack-size">Bottle of 60 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 65.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Daily Multivitamin</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="calcium" data-name="Calcium with Vitamin D" data-use="Supports strong bones as part of a balanced diet" data-cat="vitamins" data-rx="false" data-order="11">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Calcium with Vitamin D.jpg" width="400" height="300" loading="lazy" alt="Pack of Calcium with Vitamin D" onerror="this.onerror=null;this.src='../assets/images/product-calcium.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Calcium with Vitamin D</h3>
+                <p class="product-use">Supports strong bones as part of a balanced diet</p>
+                <div class="product-meta">
+                  <span class="pack-size">Bottle of 30 tablets</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 50.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Calcium with Vitamin D</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="sanitiser" data-name="Hand Sanitiser Gel" data-use="For cleaning hands when soap and water are not available" data-cat="personal" data-rx="false" data-order="12">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Hand Sanitiser Gel.jpg" width="400" height="300" loading="lazy" alt="Pack of Hand Sanitiser Gel" onerror="this.onerror=null;this.src='../assets/images/product-sanitiser.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Hand Sanitiser Gel</h3>
+                <p class="product-use">For cleaning hands</p>
+                <div class="product-meta">
+                  <span class="pack-size">250 ml bottle</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 70.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Hand Sanitiser Gel</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="moisturiser" data-name="Gentle Moisturising Lotion" data-use="For dry skin, suitable for daily use" data-cat="personal" data-rx="false" data-order="13">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Gentle Moisturising Lotion.jpg" width="400" height="300" loading="lazy" alt="Pack of Gentle Moisturising Lotion" onerror="this.onerror=null;this.src='../assets/images/product-moisturiser.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Gentle Moisturising Lotion</h3>
+                <p class="product-use">For dry skin, suitable for daily</p>
+                <div class="product-meta">
+                  <span class="pack-size">200 ml bottle</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 65.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Gentle Moisturising Lotion</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="sunscreen" data-name="Sunscreen Lotion SPF 50" data-use="Protects skin from the sun" data-cat="personal" data-rx="false" data-order="14">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Sunscreen Lotion SPF 50.jpg" width="400" height="300" loading="lazy" alt="Pack of Sunscreen Lotion SPF 50" onerror="this.onerror=null;this.src='../assets/images/product-sunscreen.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Sunscreen Lotion SPF 50</h3>
+                <p class="product-use">Protects skin from the sun</p>
+                <div class="product-meta">
+                  <span class="pack-size">100 ml tube</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 80.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Sunscreen Lotion SPF 50</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="toothpaste" data-name="Fluoride Toothpaste" data-use="For daily cleaning of teeth and gums" data-cat="personal" data-rx="false" data-order="15">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Fluoride Toothpaste.jpg" width="400" height="300" loading="lazy" alt="Pack of Fluoride Toothpaste" onerror="this.onerror=null;this.src='../assets/images/product-toothpaste.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Fluoride Toothpaste</h3>
+                <p class="product-use">For daily cleaning of teeth</p>
+                <div class="product-meta">
+                  <span class="pack-size">150 g tube</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 70.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Fluoride Toothpaste</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="diaper-cream" data-name="Baby Nappy Rash Cream" data-use="Gentle protection for baby&#x27;s skin" data-cat="baby" data-rx="false" data-order="16">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Baby Nappy Rash Cream.jpg" width="400" height="300" loading="lazy" alt="Pack of Baby Nappy Rash Cream" onerror="this.onerror=null;this.src='../assets/images/product-diaper-cream.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Baby Nappy Rash Cream</h3>
+                <p class="product-use">Gentle protection for baby&#x27;s skin</p>
+                <div class="product-meta">
+                  <span class="pack-size">50 g tube</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 65.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Baby Nappy Rash Cream</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="baby-lotion" data-name="Baby Moisturising Lotion" data-use="Mild lotion for baby&#x27;s soft skin" data-cat="baby" data-rx="false" data-order="17">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Baby Moisturising Lotion1.jpg" width="400" height="300" loading="lazy" alt="Pack of Baby Moisturising Lotion" onerror="this.onerror=null;this.src='../assets/images/product-baby-lotion.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Baby Moisturising Lotion</h3>
+                <p class="product-use">Mild lotion for baby&#x27;s soft skin & Glow</p>
+                <div class="product-meta">
+                  <span class="pack-size">200 ml bottle</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 80.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Baby Moisturising Lotion</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="thermometer" data-name="Digital Thermometer" data-use="Checks body temperature in seconds" data-cat="devices" data-rx="false" data-order="18">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Digital Thermometer.jpg" width="400" height="300" loading="lazy" alt="Pack of Digital Thermometer" onerror="this.onerror=null;this.src='../assets/images/product-thermometer.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Digital Thermometer</h3>
+                <p class="product-use">Checks body temperature in seconds</p>
+                <div class="product-meta">
+                  <span class="pack-size">1 device</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 70.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Digital Thermometer</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="bp-monitor" data-name="Blood Pressure Monitor" data-use="Check your blood pressure at home" data-cat="devices" data-rx="false" data-order="19">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Blood Pressure Monitor.jpg" width="400" height="300" loading="lazy" alt="Pack of Blood Pressure Monitor" onerror="this.onerror=null;this.src='../assets/images/product-bp-monitor.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Blood Pressure Monitor</h3>
+                <p class="product-use">Check your blood pressure at home</p>
+                <div class="product-meta">
+                  <span class="pack-size">1 device with arm cuff</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 120.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Blood Pressure Monitor</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="glucometer" data-name="Blood Sugar Meter Kit" data-use="Check blood sugar at home" data-cat="devices" data-rx="false" data-order="20">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Blood Sugar Meter Kit.jpg" width="400" height="300" loading="lazy" alt="Pack of Blood Sugar Meter Kit" onerror="this.onerror=null;this.src='../assets/images/product-glucometer.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Blood Sugar Meter Kit</h3>
+                <p class="product-use">Check Your blood sugar at home</p>
+                <div class="product-meta">
+                  <span class="pack-size">Meter with 10 strips</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 80.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Blood Sugar Meter Kit</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="first-aid-kit" data-name="Home First Aid Kit" data-use="Bandages, dressings and wipes for small cuts and scrapes" data-cat="firstaid" data-rx="false" data-order="21">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/fist aid.jpg" width="400" height="300" loading="lazy" alt="Pack of Home First Aid Kit" onerror="this.onerror=null;this.src='../assets/images/product-first-aid-kit.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Home First Aid Kit</h3>
+                <p class="product-use">Bandages, dressings and wipes for small cuts</p>
+                <div class="product-meta">
+                  <span class="pack-size">1 kit, 40 items</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 70.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Home First Aid Kit</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3" data-product-card data-id="plasters" data-name="Adhesive Plasters" data-use="For covering small cuts and grazes" data-cat="firstaid" data-rx="false" data-order="22">
+            <article class="card-box product-card">
+              <img class="product-img" src="../assets/images/Adhesive Plasters.jpg" width="400" height="300" loading="lazy" alt="Pack of Adhesive Plasters" onerror="this.onerror=null;this.src='../assets/images/product-plasters.png'">
+              <div class="product-body">
+                <div><span class="badge-tag badge-otc"><i class="bi bi-check-circle" aria-hidden="true"></i> Over the counter</span></div>
+                <h3>Adhesive Plasters</h3>
+                <p class="product-use">For covering small cuts and grazes</p>
+                <div class="product-meta">
+                  <span class="pack-size">Box of 50</span>
+                  <!-- TODO: replace the price placeholder with real prices -->
+                  <span class="product-price">&#8377; 120.00</span>
+                </div>
+                <button type="button" class="btn btn-sm" data-product-btn aria-pressed="false">
+                  <i class="bi bi-plus-lg" aria-hidden="true"></i> <span data-btn-label>Add to list</span><span class="visually-hidden"> Adhesive Plasters</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Shown when search or filter finds nothing -->
+        <div id="empty-state" class="empty-state" hidden>
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <h3 class="mt-2">We could not find that</h3>
+          <p>Try a shorter word, or <a href="contact.html">send us an enquiry</a> and we will check for you.</p>
+        </div>
+
+        <div class="text-center mt-5">
+          <button type="button" class="btn btn-outline" id="load-more" hidden><i class="bi bi-arrow-down-circle" aria-hidden="true"></i> Load more products</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ========== HOW TO ORDER (new section) ========== -->
+    <section class="section section-alt" aria-labelledby="order-help-title">
+      <div class="container">
+        <div class="order-help">
+          <div class="order-help-intro">
+            <span class="eyebrow">Easy ordering</span>
+            <h2 id="order-help-title">Can&rsquo;t find your medicine? We&rsquo;ll find it for you.</h2>
+            <p>Add what you need to your list, or send a photo of your prescription. Our pharmacist checks it and calls you to confirm the price.</p>
+            <a class="btn" href="contact.html#enquiry"><i class="bi bi-file-earmark-arrow-up" aria-hidden="true"></i> Send an enquiry</a>
+          </div>
+          <ol class="order-steps">
+            <li><span class="icon-circle"><i class="bi bi-card-checklist" aria-hidden="true"></i></span><div><h3>1. Make your list</h3><p>Tap &ldquo;Add to list&rdquo; on the items you want.</p></div></li>
+            <li><span class="icon-circle"><i class="bi bi-camera" aria-hidden="true"></i></span><div><h3>2. Share your prescription</h3><p>Upload a clear photo if your medicine needs one.</p></div></li>
+            <li><span class="icon-circle"><i class="bi bi-telephone-inbound" aria-hidden="true"></i></span><div><h3>3. We confirm by phone</h3><p>We check stock, price and a delivery time with you.</p></div></li>
+            <li><span class="icon-circle"><i class="bi bi-house-heart" aria-hidden="true"></i></span><div><h3>4. Get it at home</h3><p>Your order arrives sealed and checked.</p></div></li>
+          </ol>
+        </div>
+        <ul class="trust-row" aria-label="Why shop with us">
+          <li><i class="bi bi-patch-check" aria-hidden="true"></i> Licensed pharmacists</li>
+          <li><i class="bi bi-shield-check" aria-hidden="true"></i> Genuine products only</li>
+          <li><i class="bi bi-truck" aria-hidden="true"></i> Same-day delivery</li>
+          <li><i class="bi bi-headset" aria-hidden="true"></i> Friendly support</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Floating "your list" bar -->
+    <div id="list-bar" class="shopping-list-bar" role="region" aria-label="Your list">
+      <span><i class="bi bi-card-checklist" aria-hidden="true"></i> <span data-list-count>0 items in your list</span></span>
+      <span class="d-flex gap-2">
+        <button type="button" class="btn btn-sm btn-outline-light" id="list-clear">Clear</button>
+        <a class="btn btn-sm btn-light" href="contact.html#enquiry">Send list</a>
+      </span>
+    </div>
+
+  <!-- ========== FINAL CALL TO ACTION ========== -->
+  <section class="section pt-0" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 id="cta-title">Need medicines today?</h2>
+        <p>Send us your prescription or a list of what you need. We will confirm and deliver to your door.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="contact.html#enquiry"><i class="bi bi-file-earmark-arrow-up" aria-hidden="true"></i> Send Prescription</a>
+          <a class="btn btn-outline-light" href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call us now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html" aria-label="Pharmacy &amp; Medical Store, home"><img src="../assets/images/logo-full-white.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness" loading="lazy"></a>
+          <p>Genuine medicines and friendly advice from licensed pharmacists, delivered to your door.</p>
+          <ul class="social-links" aria-label="Social media">
+            <!-- TODO: Social media links -->
+            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://wa.me/910000000000" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer-col" aria-label="Quick links">
+          <h3>Quick links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index-2.html">Home 2</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="home-delivery.html">Home Delivery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="footer-links footer-contact">
+            <!-- TODO: Phone, email and address -->
+            <li><i class="bi bi-telephone" aria-hidden="true"></i><a href="tel:+910000000000"><span class="phone-number">+91 00000 00000</span></a></li>
+            <li><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hello@example-pharmacy.com">hello@example-pharmacy.com</a></li>
+            <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>123 Main Road, Your City</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Opening hours</h3>
+          <ul class="footer-links footer-hours">
+            <li><span>Mon to Sat</span><strong>8:00 am to 9:00 pm</strong></li>
+            <li><span>Sunday</span><strong>9:00 am to 2:00 pm</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer" role="note">
+        <i class="bi bi-info-circle" aria-hidden="true"></i>
+        <p><strong>Disclaimer:</strong> Information on this website is for general guidance only and is not a substitute for professional medical advice. Please consult a doctor or pharmacist.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span data-year>2026</span> Your Pharmacy. All rights reserved.</span>
+        <!-- TODO: Replace with your real drug licence number -->
+        <span>Drug Licence No: XX-XXXXX/XXXX</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== STICKY CALL / WHATSAPP BAR (mobile only) ========== -->
+  <div class="sticky-contact" role="navigation" aria-label="Quick contact">
+    <a href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call</a>
+    <a class="whatsapp" href="https://wa.me/910000000000" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Your Pharmacy</title>
+  <meta name="description" content="Meet the pharmacists behind our neighbourhood store. Learn our story, our mission to give safe and honest care, and see our drug licence details here.">
+  <link rel="canonical" href="https://www.example-pharmacy.com/pages/about.html">
+  <meta name="theme-color" content="#0b7a62">
+
+  <!-- Open Graph / social sharing. TODO: update the domain and image. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | Your Pharmacy">
+  <meta property="og:description" content="Meet the pharmacists behind our neighbourhood store. Learn our story, our mission to give safe and honest care, and see our drug licence details here.">
+  <meta property="og:url" content="https://www.example-pharmacy.com/pages/about.html">
+  <meta property="og:image" content="https://www.example-pharmacy.com/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- TODO: Replace favicon with your own logo -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+  <!-- Apply the saved or system theme before the page paints (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("pharmacy-theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        var dir = localStorage.getItem("pharmacy-dir");
+        if (dir) document.documentElement.setAttribute("dir", dir);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- TODO: Fonts. Max 2 families: Plus Jakarta Sans (headings) + Inter (body). Change here and in style.css variables. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 and Bootstrap Icons (CDN). The RTL build is swapped in by main.js when direction is RTL. -->
+  <link id="bootstrap-css" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-ltr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-rtl="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Template styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <!-- JSON-LD structured data. TODO: replace every placeholder value with your real business details. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+  "name": "Your Pharmacy Name",
+  "url": "https://www.example-pharmacy.com/pages/index.html",
+  "image": "https://www.example-pharmacy.com/assets/images/og-image.png",
+  "telephone": "+91-00000-00000",
+  "email": "hello@example-pharmacy.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main Road",
+    "addressLocality": "Your City",
+    "addressRegion": "Your State",
+    "postalCode": "000000",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/",
+    "https://www.instagram.com/"
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ========== EMERGENCY NOTE ========== -->
+  <div class="emergency-bar" role="note">
+    <div class="container"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i><strong>For medical emergencies, call your local emergency number.</strong></div>
+  </div>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <!-- TODO: Replace the logo and store name -->
+        <a class="navbar-brand" href="index.html" aria-label="Pharmacy &amp; Medical Store, home">
+          <img class="brand-logo brand-logo-light" src="../assets/images/logo-full.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness">
+          <img class="brand-logo brand-logo-dark" src="../assets/images/logo-full-white.png" width="900" height="267" alt="" aria-hidden="true">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu"
+                aria-controls="main-menu" aria-expanded="false" aria-label="Open the menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto me-lg-2 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="home-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu" aria-labelledby="home-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="home-delivery.html">Home Delivery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="header-tools">
+            <button type="button" class="tool-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span data-theme-label>Dark</span>
+            </button>
+            <button type="button" class="tool-btn" data-dir-toggle aria-pressed="false" aria-label="Switch text direction between left-to-right and right-to-left">
+              <span data-dir-label>RTL</span>
+            </button>
+            <!-- TODO: Phone number -->
+            <a class="btn btn-sm" href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE BANNER ========== -->
+  <div class="page-banner has-photo" style="background-image:url('../assets/images/ph9.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div class="container">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb mb-2">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+      </ol></nav>
+      <h1>About Us</h1>
+      <p>A family-run neighbourhood pharmacy built on honest advice and safe, genuine medicines.</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ========== STORY ========== -->
+    <section class="section" aria-labelledby="story-title">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6 order-2 order-lg-1">
+            <span class="eyebrow">Our story</span>
+            <h2 id="story-title">Caring for our neighbours since YEAR</h2>
+            <!-- TODO: Write your own store story -->
+            <p>We started as a small shop with one idea: everyone deserves clear answers about their medicines. Today we still know many of our customers by name.</p>
+            <p>We keep our shelves stocked with genuine products, explain every medicine in plain words, and deliver to homes so that nobody has to travel when they are unwell.</p>
+            <ul class="tick-list">
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Licensed pharmacists check every prescription</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Medicines bought only from approved suppliers</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Home delivery across our local area</li>
+            </ul>
+            <div class="hero-actions mt-4">
+              <a class="btn" href="contact.html">Visit or contact us</a>
+              <a class="btn btn-outline" href="products.html">Browse products</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 order-1 order-lg-2">
+            <div class="about-visual">
+              <img class="about-img" src="../assets/images/ph5.jpg" onerror="this.onerror=null;this.src='../assets/images/about-store.png'" width="800" height="600" loading="lazy" alt="Our pharmacy store">
+              <div class="about-badge"><strong>Since YEAR</strong><span>Serving our community</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NUMBERS (TODO: replace the XX values with your real figures) ========== -->
+    <section class="stats-band" aria-label="Our pharmacy in numbers">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat"><strong>20+</strong><span>Years of service</span></div>
+          <div class="stat"><strong>10,000+</strong><span>Families served</span></div>
+          <div class="stat"><strong>100%</strong><span>Genuine medicines</span></div>
+          <div class="stat"><strong>7 days</strong><span>Open every week</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MISSION ========== -->
+    <section class="section section-alt" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">What we stand for</span><h2 id="mission-title">Our mission</h2><p>To make safe, genuine healthcare easy to reach for every family in our neighbourhood.</p></div>
+        <div class="row g-4">
+          <div class="col-12 col-md-4"><div class="card-box value-card"><span class="value-num" aria-hidden="true">01</span><span class="icon-circle"><i class="bi bi-shield-check" aria-hidden="true"></i></span><h3>Safety first</h3><p>We check every prescription and every pack before it leaves the store.</p></div></div>
+          <div class="col-12 col-md-4"><div class="card-box value-card"><span class="value-num" aria-hidden="true">02</span><span class="icon-circle"><i class="bi bi-chat-square-heart" aria-hidden="true"></i></span><h3>Plain language</h3><p>We explain things simply, without confusing medical jargon.</p></div></div>
+          <div class="col-12 col-md-4"><div class="card-box value-card"><span class="value-num" aria-hidden="true">03</span><span class="icon-circle"><i class="bi bi-people" aria-hidden="true"></i></span><h3>Community care</h3><p>We support our neighbours, especially elderly and busy families.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OUR JOURNEY (new section) ========== -->
+    <section class="section" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Our journey</span><h2 id="journey-title">How we grew with our neighbourhood</h2><p>A few moments that shaped who we are today.</p></div>
+        <!-- TODO: Replace the years and text with your own milestones -->
+        <ol class="timeline">
+          <li class="timeline-item"><span class="timeline-year">2015</span><div class="timeline-card"><h3>A small shop opens</h3><p>We open our doors with one pharmacist and a promise to explain every medicine clearly.</p></div></li>
+          <li class="timeline-item"><span class="timeline-year">2018</span><div class="timeline-card"><h3>Home delivery begins</h3><p>Neighbours who could not travel asked for help, so we started bringing medicines to their homes.</p></div></li>
+          <li class="timeline-item"><span class="timeline-year">2020</span><div class="timeline-card"><h3>A bigger, safer store</h3><p>We grow our shelves and our team while keeping the same friendly, careful service.</p></div></li>
+          <li class="timeline-item"><span class="timeline-year">2026</span><div class="timeline-card"><h3>Trusted by local families</h3><p>We still know many customers by name, and we are here every day to help.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== TEAM ========== -->
+    <section class="section section-alt" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Our people</span><h2 id="team-title">Meet our pharmacists</h2></div>
+        <!-- TODO: Replace names, roles and photos. Use real registration numbers. -->
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-4"><div class="card-box team-card team-photo"><img src="../assets/images/Dr.Martin Jos.jpg" onerror="this.onerror=null;this.src='../assets/images/team-1.png'" width="400" height="460" loading="lazy" alt="Portrait of head pharmacist"><div class="team-info"><h3>Dr.Martin Jos</h3><p class="role">Head Pharmacist</p><p class="small">Registration No: XXXX-XXXX</p></div></div></div>
+          <div class="col-12 col-sm-6 col-lg-4"><div class="card-box team-card team-photo"><img src="../assets/images/Jessica Taylor.jpg" onerror="this.onerror=null;this.src='../assets/images/team-2.png'" width="400" height="460" loading="lazy" alt="Portrait of pharmacist"><div class="team-info"><h3>Jessica Taylor</h3><p class="role">Pharmacist</p><p class="small">Registration No: XXXX-XXXX</p></div></div></div>
+          <div class="col-12 col-sm-6 col-lg-4 mx-sm-auto mx-lg-0"><div class="card-box team-card team-photo"><img src="../assets/images/Dr. Michael Chang.jpg" onerror="this.onerror=null;this.src='../assets/images/team-3.png'" width="400" height="460" loading="lazy" alt="Portrait of customer care lead"><div class="team-info"><h3>Dr. Michael Chang</h3><p class="role">Customer Care Lead</p><p class="small">Here to help with orders and delivery</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LICENCE ========== -->
+    <section class="section" aria-labelledby="licence-title">
+      <div class="container">
+        <div class="licence-box licence-split">
+          <div class="licence-lead">
+            <span class="icon-circle"><i class="bi bi-patch-check-fill" aria-hidden="true"></i></span>
+            <h2 id="licence-title" class="h4">Licence and registration</h2>
+            <p>We are a registered pharmacy. Our details are shown here for your trust and safety.</p>
+          </div>
+          <!-- TODO: Replace with your real licence details. These are required by law in most places. -->
+          <dl class="licence-list">
+            <div><dt>Drug Licence Number</dt><dd>XX-XXXXX/XXXX</dd></div>
+            <div><dt>Pharmacy Registration Number</dt><dd>XXXX-XXXX</dd></div>
+            <div><dt>Pharmacist in charge</dt><dd>Pharmacist Name</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  <!-- ========== FINAL CALL TO ACTION ========== -->
+  <section class="section pt-0" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 id="cta-title">Need medicines today?</h2>
+        <p>Send us your prescription or a list of what you need. We will confirm and deliver to your door.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="contact.html#enquiry"><i class="bi bi-file-earmark-arrow-up" aria-hidden="true"></i> Send Prescription</a>
+          <a class="btn btn-outline-light" href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call us now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html" aria-label="Pharmacy &amp; Medical Store, home"><img src="../assets/images/logo-full-white.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness" loading="lazy"></a>
+          <p>Genuine medicines and friendly advice from licensed pharmacists, delivered to your door.</p>
+          <ul class="social-links" aria-label="Social media">
+            <!-- TODO: Social media links -->
+            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://wa.me/910000000000" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer-col" aria-label="Quick links">
+          <h3>Quick links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index-2.html">Home 2</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="home-delivery.html">Home Delivery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="footer-links footer-contact">
+            <!-- TODO: Phone, email and address -->
+            <li><i class="bi bi-telephone" aria-hidden="true"></i><a href="tel:+910000000000"><span class="phone-number">+91 00000 00000</span></a></li>
+            <li><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hello@example-pharmacy.com">hello@example-pharmacy.com</a></li>
+            <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>123 Main Road, Your City</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Opening hours</h3>
+          <ul class="footer-links footer-hours">
+            <li><span>Mon to Sat</span><strong>8:00 am to 9:00 pm</strong></li>
+            <li><span>Sunday</span><strong>9:00 am to 2:00 pm</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer" role="note">
+        <i class="bi bi-info-circle" aria-hidden="true"></i>
+        <p><strong>Disclaimer:</strong> Information on this website is for general guidance only and is not a substitute for professional medical advice. Please consult a doctor or pharmacist.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span data-year>2026</span> Your Pharmacy. All rights reserved.</span>
+        <!-- TODO: Replace with your real drug licence number -->
+        <span>Drug Licence No: XX-XXXXX/XXXX</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== STICKY CALL / WHATSAPP BAR (mobile only) ========== -->
+  <div class="sticky-contact" role="navigation" aria-label="Quick contact">
+    <a href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call</a>
+    <a class="whatsapp" href="https://wa.me/910000000000" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact and Prescription Enquiry | Your Pharmacy</title>
+  <meta name="description" content="Send a prescription enquiry, call or WhatsApp us. Find our store address, opening hours and map. We reply quickly and will help you arrange home delivery.">
+  <link rel="canonical" href="https://www.example-pharmacy.com/pages/contact.html">
+  <meta name="theme-color" content="#0b7a62">
+
+  <!-- Open Graph / social sharing. TODO: update the domain and image. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact and Prescription Enquiry | Your Pharmacy">
+  <meta property="og:description" content="Send a prescription enquiry, call or WhatsApp us. Find our store address, opening hours and map. We reply quickly and will help you arrange home delivery.">
+  <meta property="og:url" content="https://www.example-pharmacy.com/pages/contact.html">
+  <meta property="og:image" content="https://www.example-pharmacy.com/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- TODO: Replace favicon with your own logo -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+  <!-- Apply the saved or system theme before the page paints (prevents a flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("pharmacy-theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        var dir = localStorage.getItem("pharmacy-dir");
+        if (dir) document.documentElement.setAttribute("dir", dir);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- TODO: Fonts. Max 2 families: Plus Jakarta Sans (headings) + Inter (body). Change here and in style.css variables. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 and Bootstrap Icons (CDN). The RTL build is swapped in by main.js when direction is RTL. -->
+  <link id="bootstrap-css" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-ltr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        data-rtl="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Template styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <!-- JSON-LD structured data. TODO: replace every placeholder value with your real business details. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+  "name": "Your Pharmacy Name",
+  "url": "https://www.example-pharmacy.com/pages/index.html",
+  "image": "https://www.example-pharmacy.com/assets/images/og-image.png",
+  "telephone": "+91-00000-00000",
+  "email": "hello@example-pharmacy.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main Road",
+    "addressLocality": "Your City",
+    "addressRegion": "Your State",
+    "postalCode": "000000",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/",
+    "https://www.instagram.com/"
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ========== EMERGENCY NOTE ========== -->
+  <div class="emergency-bar" role="note">
+    <div class="container"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i><strong>For medical emergencies, call your local emergency number.</strong></div>
+  </div>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <!-- TODO: Replace the logo and store name -->
+        <a class="navbar-brand" href="index.html" aria-label="Pharmacy &amp; Medical Store, home">
+          <img class="brand-logo brand-logo-light" src="../assets/images/logo-full.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness">
+          <img class="brand-logo brand-logo-dark" src="../assets/images/logo-full-white.png" width="900" height="267" alt="" aria-hidden="true">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu"
+                aria-controls="main-menu" aria-expanded="false" aria-label="Open the menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto me-lg-2 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html" id="home-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu" aria-labelledby="home-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="home-delivery.html">Home Delivery</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+          <div class="header-tools">
+            <button type="button" class="tool-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i><span data-theme-label>Dark</span>
+            </button>
+            <button type="button" class="tool-btn" data-dir-toggle aria-pressed="false" aria-label="Switch text direction between left-to-right and right-to-left">
+              <span data-dir-label>RTL</span>
+            </button>
+            <!-- TODO: Phone number -->
+            <a class="btn btn-sm" href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE BANNER ========== -->
+  <div class="page-banner has-photo" style="background-image:url('../assets/images/ph12.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div class="container">
+      <nav aria-label="Breadcrumb"><ol class="breadcrumb mb-2">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol></nav>
+      <h1>Contact Us</h1>
+      <p>Send your prescription or medicine list and we will call you to confirm. You can also call or message us.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="section" aria-labelledby="enquiry">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- ========== ENQUIRY FORM ========== -->
+          <div class="col-12 col-lg-7">
+            <h2 id="enquiry">Prescription enquiry form</h2>
+            <p>Fields marked <span class="required-mark" aria-hidden="true">*</span><span class="visually-hidden">with a star</span> are needed. We use your details only to reply to your enquiry.</p>
+
+            <div id="form-success" class="alert-note alert-success-note form-success" role="alert" tabindex="-1">
+              <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+              <p><strong>Thank you! We have received your enquiry.</strong> Our pharmacist will call you soon to confirm.</p>
+            </div>
+            <div id="form-failure" class="alert-note alert-danger-note form-success" role="alert" tabindex="-1">
+              <i class="bi bi-exclamation-octagon-fill" aria-hidden="true"></i>
+              <p><strong>Sorry, something went wrong.</strong> Please try again, or call us on the number shown on this page.</p>
+            </div>
+
+            <!-- TODO: Form. Formspree: set action to https://formspree.io/f/YOUR_FORM_ID.
+                 Netlify: keep data-netlify="true" and the hidden form-name field, and set action to your page URL (for example /pages/contact.html). -->
+            <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" enctype="multipart/form-data"
+                  name="prescription-enquiry" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="prescription-enquiry">
+              <input type="hidden" name="_subject" value="New prescription enquiry">
+              <p class="d-none" aria-hidden="true"><label>Do not fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="fullname">Full name <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="text" id="fullname" name="name" autocomplete="name" required data-rule="name" aria-describedby="fullname-error">
+                  <div class="invalid-feedback" id="fullname-error" role="alert"></div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="phone">Phone <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" required data-rule="phone" aria-describedby="phone-error">
+                  <div class="invalid-feedback" id="phone-error" role="alert"></div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="email" id="email" name="email" autocomplete="email" required data-rule="email" aria-describedby="email-error">
+                  <div class="invalid-feedback" id="email-error" role="alert"></div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="address">Delivery address <span class="required-mark" aria-hidden="true">*</span></label>
+                  <textarea class="form-control" id="address" name="address" rows="3" autocomplete="street-address" required data-rule="address" aria-describedby="address-error"></textarea>
+                  <div class="invalid-feedback" id="address-error" role="alert"></div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="medicines">Medicine name(s)</label>
+                  <textarea class="form-control" id="medicines" name="medicines" rows="3" data-rule="medicine-or-file" aria-describedby="medicines-help medicines-error"></textarea>
+                  <div class="form-text" id="medicines-help">Type the names, or upload your prescription below. You can do both.</div>
+                  <div class="invalid-feedback" id="medicines-error" role="alert"></div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="prescription">Upload prescription (JPG, PNG or PDF, up to 5 MB)</label>
+                  <input class="form-control" type="file" id="prescription" name="prescription" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" data-rule="file" aria-describedby="prescription-error">
+                  <div class="invalid-feedback" id="prescription-error" role="alert"></div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="message">Message (optional)</label>
+                  <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check d-flex align-items-start">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" id="consent" name="consent" value="yes" required data-rule="consent" aria-describedby="consent-error">
+                    <label class="form-check-label" for="consent">I agree that the pharmacy may contact me about this enquiry and keep my prescription for this order. <span class="required-mark" aria-hidden="true">*</span></label>
+                  </div>
+                  <div class="invalid-feedback d-block" id="consent-error" role="alert"></div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-block" type="submit"><i class="bi bi-send" aria-hidden="true"></i> <span data-btn-text>Send enquiry</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- ========== STORE DETAILS ========== -->
+          <div class="col-12 col-lg-5">
+            <h2 class="h3">Visit or call us</h2>
+            <!-- TODO: Replace all store details below -->
+            <ul class="contact-list mb-4">
+              <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><div><strong>Address</strong><br>123 Main Road, Your Area,<br>Your City, State 000000</div></li>
+              <li><i class="bi bi-telephone-fill" aria-hidden="true"></i><div><strong>Phone</strong><br><a class="phone-number" href="tel:+910000000000">+91 00000 00000</a></div></li>
+              <li><i class="bi bi-whatsapp" aria-hidden="true"></i><div><strong>WhatsApp</strong><br><a class="phone-number" href="https://wa.me/910000000000" rel="noopener">+91 00000 00000</a></div></li>
+              <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><div><strong>Email</strong><br><a href="mailto:hello@example-pharmacy.com">hello@example-pharmacy.com</a></div></li>
+            </ul>
+
+            <h3 class="h5">Opening hours</h3>
+            <table class="hours-table w-100 mb-4">
+              <tbody>
+                <tr><td>Monday to Saturday</td><td>8:00 am to 9:00 pm</td></tr>
+                <tr><td>Sunday</td><td>9:00 am to 2:00 pm</td></tr>
+              </tbody>
+            </table>
+
+            <h3 class="h5">Follow us</h3>
+            <ul class="social-links mb-4" aria-label="Social media">
+              <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://wa.me/910000000000" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.youtube.com/" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+
+            <!-- Calendar / booking hook (hidden until a link is set in plugins/booking.js) -->
+            <div data-booking class="mb-4">
+              <a id="booking-link" class="btn btn-outline btn-block" href="#"><i class="bi bi-calendar-check" aria-hidden="true"></i> Book a call-back with our pharmacist</a>
+            </div>
+
+            <!-- Google Maps. Map URL is set in assets/js/main.js (Config.mapEmbedUrl) - replace with your store location -->
+            <div id="map" class="map-placeholder" role="region" aria-label="Map of our store">
+              <div><i class="bi bi-map fs-1" aria-hidden="true"></i><p class="mb-0 mt-2">Google Map goes here. Add your map link in <code>main.js</code>.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html" aria-label="Pharmacy &amp; Medical Store, home"><img src="../assets/images/logo-full-white.png" width="900" height="267" alt="Pharmacy &amp; Medical Store - Health, Care, Wellness" loading="lazy"></a>
+          <p>Genuine medicines and friendly advice from licensed pharmacists, delivered to your door.</p>
+          <ul class="social-links" aria-label="Social media">
+            <!-- TODO: Social media links -->
+            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://wa.me/910000000000" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer-col" aria-label="Quick links">
+          <h3>Quick links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="index-2.html">Home 2</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="home-delivery.html">Home Delivery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="footer-links footer-contact">
+            <!-- TODO: Phone, email and address -->
+            <li><i class="bi bi-telephone" aria-hidden="true"></i><a href="tel:+910000000000"><span class="phone-number">+91 00000 00000</span></a></li>
+            <li><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:hello@example-pharmacy.com">hello@example-pharmacy.com</a></li>
+            <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>123 Main Road, Your City</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Opening hours</h3>
+          <ul class="footer-links footer-hours">
+            <li><span>Mon to Sat</span><strong>8:00 am to 9:00 pm</strong></li>
+            <li><span>Sunday</span><strong>9:00 am to 2:00 pm</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer" role="note">
+        <i class="bi bi-info-circle" aria-hidden="true"></i>
+        <p><strong>Disclaimer:</strong> Information on this website is for general guidance only and is not a substitute for professional medical advice. Please consult a doctor or pharmacist.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span data-year>2026</span> Your Pharmacy. All rights reserved.</span>
+        <!-- TODO: Replace with your real drug licence number -->
+        <span>Drug Licence No: XX-XXXXX/XXXX</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== STICKY CALL / WHATSAPP BAR (mobile only) ========== -->
+  <div class="sticky-contact" role="navigation" aria-label="Quick contact">
+    <a href="tel:+910000000000"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call</a>
+    <a class="whatsapp" href="https://wa.me/910000000000" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/plugins/booking.js" defer></script>
+</body>
+</html>

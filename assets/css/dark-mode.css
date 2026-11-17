@@ -1,0 +1,161 @@
+/* ==========================================================================
+   DARK MODE
+   Applied when <html data-theme="dark"> is set by main.js. The script picks
+   the visitor's saved choice first, then their system preference.
+   TODO: adjust these colours if you change the brand palette in style.css.
+   ========================================================================== */
+[data-theme="dark"] {
+  --color-primary: #2fb594;
+  --color-primary-dark: #7fdcc3;
+  --color-primary-soft: #14312b;
+  --color-secondary: #6cc4dc;
+  --color-accent: #f2b25a;
+  --color-accent-soft: #3a2c10;
+  --color-success: #6fd08a;
+  --color-warning: #f2b25a;
+  --color-danger: #ff8f84;
+  --color-text: #e8f1ef;
+  --color-text-muted: #b4c7c3;
+  --color-bg: #0e1a18;
+  --color-surface: #13231f;
+  --color-border: #2a423d;
+  --color-on-primary: #05231c;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --focus-ring: 0 0 0 3px #0e1a18, 0 0 0 6px #6cc4dc;
+  color-scheme: dark;
+}
+[data-theme="dark"] body { background: var(--color-bg); color: var(--color-text); }
+[data-theme="dark"] .btn-outline { color: var(--color-primary-dark); }
+[data-theme="dark"] .btn-outline:hover { background: var(--color-primary); color: #05231c; }
+[data-theme="dark"] .btn-light { background: #e8f1ef; color: #0a3a30; border-color: #e8f1ef; }
+[data-theme="dark"] .btn-outline-light:hover { color: #0a3a30; }
+[data-theme="dark"] .navbar-toggler-icon::before { color: var(--color-text); }
+[data-theme="dark"] .badge-rx { background: #4a1d19; color: #ffb4ab; }
+[data-theme="dark"] .badge-otc { background: #173a25; color: #9be4b2; }
+[data-theme="dark"] .badge-info { background: #3a2c10; color: #f6cf8c; }
+[data-theme="dark"] .alert-info-note { background: #143a31; border-color: #2a6455; color: #c6efe3; }
+[data-theme="dark"] .alert-warn-note { background: #3a2c10; border-color: #6b5220; color: #f6dca8; }
+[data-theme="dark"] .alert-danger-note { background: #431b17; border-color: #7c3a34; color: #ffd0ca; }
+[data-theme="dark"] .alert-success-note { background: #173a25; border-color: #2c6a43; color: #bff0cf; }
+[data-theme="dark"] .emergency-bar { background: #6b1a12; }
+[data-theme="dark"] .delivery-strip { background: #0b2a24; }
+[data-theme="dark"] .cta-banner { background: linear-gradient(135deg, #0f5f4d, #0b475a); }
+[data-theme="dark"] .cta-banner .btn-light { color: #0a3a30; }
+[data-theme="dark"] .site-footer { background: #0a1613; }
+[data-theme="dark"] .footer-bottom { background: #060e0c; }
+[data-theme="dark"] .skeleton { background: #223a35; }
+[data-theme="dark"] .skeleton::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent); }
+[data-theme="dark"] .accordion { --bs-accordion-bg: var(--color-bg); --bs-accordion-color: var(--color-text); --bs-accordion-active-bg: var(--color-primary-soft); --bs-accordion-active-color: var(--color-primary-dark); --bs-accordion-border-color: var(--color-border); }
+[data-theme="dark"] .accordion-button::after { filter: invert(1) brightness(1.5); }
+[data-theme="dark"] .form-control::placeholder { color: #8ea5a0; }
+[data-theme="dark"] .licence-box { border-color: #6b5220; }
+[data-theme="dark"] .step-number { color: #2a1a00; }
+[data-theme="dark"] .testimonial .stars { color: #f2b25a; }
+[data-theme="dark"] .sticky-contact a { color: #05231c; }
+[data-theme="dark"] .sticky-contact a.whatsapp { background: #2fb594; }
+[data-theme="dark"] img.product-img, [data-theme="dark"] .hero-img, [data-theme="dark"] .about-img { filter: brightness(0.92); }
+
+/* ---------- Modern design layer in dark mode ---------- */
+[data-theme="dark"] {
+  --glass: rgba(19, 35, 31, 0.78);
+  --gradient-brand: linear-gradient(135deg, #0d5545 0%, #0f7a63 55%, #0f6580 100%);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] .emergency-bar { background: #3a0f0a; }
+[data-theme="dark"] .site-header .navbar { border-color: rgba(255, 255, 255, 0.08); }
+[data-theme="dark"] .navbar-collapse.show, [data-theme="dark"] .navbar-collapse.collapsing { background: var(--color-surface); }
+[data-theme="dark"] .btn { color: #fff; }
+[data-theme="dark"] .btn-outline { color: var(--color-primary-dark); background: transparent; }
+[data-theme="dark"] .btn-outline:hover { background: var(--color-primary); color: #05231c; }
+[data-theme="dark"] .btn-light { background: #e8f1ef; color: #0a3a30; }
+[data-theme="dark"] .hero {
+  background:
+    radial-gradient(60% 60% at 85% 10%, rgba(18, 112, 138, 0.28) 0%, transparent 60%),
+    radial-gradient(50% 55% at 5% 90%, rgba(242, 178, 90, 0.12) 0%, transparent 60%),
+    radial-gradient(55% 60% at 40% 0%, rgba(19, 138, 112, 0.22) 0%, transparent 65%),
+    var(--color-bg);
+}
+[data-theme="dark"] .float-chip { color: #e8f1ef; border-color: rgba(255, 255, 255, 0.1); }
+[data-theme="dark"] .float-chip i { background: #14312b; color: #7fdcc3; }
+[data-theme="dark"] .float-chip span { color: #b4c7c3; }
+[data-theme="dark"] .search-bar, [data-theme="dark"] .newsletter-form { background: var(--color-surface); }
+[data-theme="dark"] .trust-strip { background: var(--color-surface); }
+[data-theme="dark"] .card-box { background: var(--color-surface); border-color: var(--color-border); }
+[data-theme="dark"] .bento .bento-feature { background: var(--gradient-brand); border-color: transparent; }
+[data-theme="dark"] .bento .bento-warm { background: #2d2410; }
+[data-theme="dark"] .bento .bento-cool { background: #12303a; }
+[data-theme="dark"] .bento .bento-warm h3, [data-theme="dark"] .bento .bento-cool h3 { color: #e8f1ef; }
+[data-theme="dark"] .bento .bento-warm p, [data-theme="dark"] .bento .bento-cool p { color: #b4c7c3; }
+[data-theme="dark"] .why-section { background: linear-gradient(135deg, #0b3f35 0%, #0d5a4a 55%, #0b4658 100%); }
+[data-theme="dark"] .delivery-strip > .container { background: #0b211c; border: 1px solid var(--color-border); }
+[data-theme="dark"] .newsletter-box { background: linear-gradient(135deg, #14312b, var(--color-surface)); }
+[data-theme="dark"] .page-banner {
+  background: radial-gradient(60% 90% at 90% 0%, rgba(18,112,138,0.25), transparent 60%), radial-gradient(50% 80% at 0% 100%, rgba(242,178,90,0.10), transparent 60%), #10231f;
+}
+[data-theme="dark"] .eyebrow { background: #14312b; color: var(--color-primary-dark); }
+[data-theme="dark"] .hero-pill { background: #14312b; border-color: #2a6455; }
+[data-theme="dark"] .stats strong { color: var(--color-primary-dark); }
+[data-theme="dark"] .shopping-list-bar { background: #0b211c; border: 1px solid var(--color-border); }
+[data-theme="dark"] .site-footer { background: #0b1815; }
+[data-theme="dark"] .helpline-box { background: linear-gradient(135deg, #14312b, var(--color-surface)); }
+[data-theme="dark"] .filter-tab[aria-selected="true"] { color: #fff; }
+
+/* Home dropdown + avatars */
+[data-theme="dark"] .navbar .dropdown-menu { background: var(--color-surface); border-color: var(--color-border); }
+[data-theme="dark"] .navbar .dropdown-item { color: var(--color-text); }
+[data-theme="dark"] .navbar .dropdown-item:hover, [data-theme="dark"] .navbar .dropdown-item:focus { background: rgba(255,255,255,.08); color: var(--color-text); }
+[data-theme="dark"] .navbar .dropdown-item.active { background: var(--color-primary); color: #05231c; }
+[data-theme="dark"] .testimonial .avatar { border-color: var(--color-surface); }
+
+/* Banner photos in dark mode */
+[data-theme="dark"] .hero {
+  background:
+    linear-gradient(180deg, rgba(12, 22, 21, 0.90), rgba(12, 22, 21, 0.96)),
+    var(--img-hero) center / cover no-repeat,
+    radial-gradient(60% 60% at 85% 10%, rgba(14, 111, 134, 0.18) 0%, transparent 60%),
+    var(--color-bg);
+}
+[data-theme="dark"] .cta-banner { background: linear-gradient(135deg, rgba(15, 95, 77, 0.92), rgba(11, 71, 90, 0.9)), var(--img-cta) center / cover no-repeat, #0f5f4d; }
+[data-theme="dark"] .newsletter-box, [data-theme="dark"] .final-split {
+  background: linear-gradient(135deg, rgba(23, 38, 36, 0.93), rgba(18, 30, 29, 0.95)), var(--img-newsletter) center / cover no-repeat, var(--color-surface);
+}
+
+/* Inner-page banners with photos, dark mode */
+[data-theme="dark"] .page-banner.has-photo {
+  background: linear-gradient(180deg, rgba(10, 22, 20, 0.84), rgba(10, 22, 20, 0.93)), var(--img-page) center / cover no-repeat, #10231f;
+}
+[data-theme="dark"] .center-page.has-photo {
+  background: linear-gradient(180deg, rgba(10, 22, 20, 0.86), rgba(10, 22, 20, 0.94)), var(--img-page) center / cover no-repeat, var(--color-bg);
+}
+
+
+/* Why choose us keeps its image-backed emerald treatment in both themes. */
+[data-theme="dark"] .why-section {
+  background:
+    linear-gradient(115deg, rgba(2, 35, 30, .55), rgba(3, 55, 59, .45)),
+    url("../images/why-choose-bg.webp") center / cover no-repeat;
+}
+
+/* Health Essentials boxes in dark mode */
+[data-theme="dark"] .bento .bento-warm { background: #123d33; }
+[data-theme="dark"] .bento .bento-cool { background: #0f3a45; }
+[data-theme="dark"] .bento .bento-feature.bento-photo {
+  background:
+    linear-gradient(180deg, rgba(2, 35, 30, .35) 0%, rgba(2, 30, 27, .9) 100%),
+    url("../images/ph4.jpg") center / cover no-repeat,
+    var(--gradient-brand);
+}
+
+[data-theme="dark"] .page-banner.has-photo {
+  background: linear-gradient(180deg, rgba(10, 22, 20, 0.66), rgba(10, 22, 20, 0.80)), var(--img-page) center / cover no-repeat, #10231f;
+}
+
+/* Redesigned sections: dark mode touches (most colours come from the variables above) */
+[data-theme="dark"] .site-footer { background: #0a1613; }
+[data-theme="dark"] .about-visual::before { background: #14312b; }
+[data-theme="dark"] .value-num { color: #1a3a33; }
+[data-theme="dark"] .timeline-year { box-shadow: 0 0 0 6px var(--color-bg); }
+[data-theme="dark"] .faq-side { background: #14312b; }
+[data-theme="dark"] .stats-band, [data-theme="dark"] .footer-cta, [data-theme="dark"] .helpline-card { background: linear-gradient(120deg, #0b5a49, #0d4c5f); }
+[data-theme="dark"] .pay-icon { color: #05231c; }

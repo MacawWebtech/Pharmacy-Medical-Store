@@ -1,0 +1,20 @@
+/* ==========================================================================
+   RTL SUPPORT (Arabic, Hebrew, Urdu, Persian)
+   Applied when <html dir="rtl">. style.css already uses logical properties
+   (inset-inline, margin-inline, padding-inline) so this file only holds
+   the small fixes that logical properties cannot cover.
+   TODO: if you add RTL fonts (e.g. "Noto Naskh Arabic", "Heebo"), set them here.
+   ========================================================================== */
+[dir="rtl"] body { text-align: right; }
+[dir="rtl"] .navbar-nav { padding-inline-start: 0; }
+[dir="rtl"] .accordion-button::after { margin-inline-start: auto; margin-inline-end: 0; }
+[dir="rtl"] .accordion-button { text-align: right; }
+[dir="rtl"] .form-check { padding-left: 0; padding-right: 1.5em; }
+[dir="rtl"] .form-check .form-check-input { float: right; margin-left: 0; margin-right: -1.5em; }
+[dir="rtl"] .form-select { background-position: left 0.75rem center; padding-right: 0.75rem; padding-left: 2.25rem; }
+[dir="rtl"] .bi-arrow-right::before { content: "\f12f"; }   /* flip arrow-right to arrow-left */
+[dir="rtl"] .bi-chevron-right::before { content: "\f284"; }
+[dir="rtl"] .hours-table td:last-child { text-align: left; }
+[dir="rtl"] input[type="tel"], [dir="rtl"] input[type="email"], [dir="rtl"] .phone-number { direction: ltr; text-align: right; }
+[dir="rtl"] .section-head, [dir="rtl"] .essential-card, [dir="rtl"] .step-card, [dir="rtl"] .center-page { text-align: center; }
+[dir="rtl"] .sticky-contact a i { margin-inline: 0.25rem; }
